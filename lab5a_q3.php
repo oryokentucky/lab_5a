@@ -13,12 +13,13 @@
     </form>
 
     <?php 
-  
+    // Check if 'number' is set in the query string
     if (isset($_GET["number"])) {
         $number = (int)$_GET["number"];
         echo "<h3>Multiplication Table for $number</h3>";
     ?>
 
+    <!-- Multiplication table -->
     <table border="1" cellspacing="0" cellpadding="5">
         <tr>
             <th>No</th>
@@ -26,8 +27,8 @@
             <th>Answer</th>
         </tr>
         <?php
-    
-        for ($i = 1; $i <= 10; $i++) {
+        // Generate table rows from 1 to 12
+        for ($i = 1; $i <= 12; $i++) {
             $result = $number * $i;
             echo "<tr>";
             echo "<td>$i</td>";
@@ -41,24 +42,4 @@
     <?php } ?>
 
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
